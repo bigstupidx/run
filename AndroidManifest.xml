@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.run"
+    android:versionCode="173"
+    android:versionName="1.7.2" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" />
+    
+    <!-- 极光推送 -->
+    <permission 
+        android:name="com.run.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />    
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />       
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="com.run.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    
+    <!-- 没有摄像头的设备也可以下载 -->
+    <uses-feature 
+        android:name="android.hardware.camera"
+        android:required="false" />
+    
+    <!-- 对屏幕支持 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name="com.run.MyApplication"
+        android:label="@string/app_name"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:theme="@style/CustomActionBarTheme" >                
+        
+        <activity
+            android:name="com.run.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>      
+        
+        <service 
+		    android:name="com.baidu.location.f" 
+		    android:enabled="true"
+		    android:process=":remote" />
+		
+        <service android:name="com.run.unlock.LockService" />     
+        
+        <service android:name="com.run.user.DownloadService" />
+        
+        <activity android:name="com.run.user.GuideActivity" />
+         
+        <activity
+            android:label="@string/record"
+            android:name="com.run.record.RecordActivity" />      
+        <activity
+        	android:logo="@drawable/navigationbar_icon_back_normal"
+            android:label="@string/detail"
+            android:name="com.run.record.RecordDetail" />
+		<activity
+            android:logo="@drawable/navigationbar_icon_back_normal"
+            android:label="@string/share" 
+            android:name="com.run.record.Share" />     
+        <activity 
+            android:theme="@android:style/Theme.Dialog"
+            android:label="@string/qqzone"
+            android:name="com.run.share.QZoneShare" />    
+		
+		<activity 
+            android:logo="@drawable/navigationbar_icon_back_normal"
+            android:label="@string/weather"
+            android:name="com.run.weather.WeatherActivity" />
+    	<activity
+         	android:theme="@android:style/Theme.Dialog"
+            android:label="@string/check"
+            android:name="com.run.CheckLocation" />
+    	<activity 
+    	    android:logo="@drawable/navigationbar_icon_back_normal"
+    	    android:label="@string/user"
+    	    android:name="com.run.user.UserActivity" />
+    	<activity    	    
+    	    android:label="@string/setting"
+    	    android:name="com.run.setting.SetActivity" />
+    	<activity
+    	    android:logo="@drawable/navigationbar_icon_back_normal"
+    	    android:label="@string/offline"
+    	    android:name="com.run.setting.OffLineActivity" />
+    	<activity
+    	    android:logo="@drawable/navigationbar_icon_back_normal"
+    	    android:label="@string/login"
+    	    android:name="com.run.user.LoginActivity" />    	
+    	<activity
+            android:label="@string/info"
+            android:name="com.run.RunInfo" />
+    	<activity 
+    	    android:logo="@drawable/navigationbar_icon_back_normal"    	    
+    	    android:name="com.run.push.TestActivity"/>
+    	<activity
+            android:label="@string/record"
+            android:name="com.run.notify.InformationActivity" /> 
+        <activity
+	   	    android:logo="@drawable/navigationbar_icon_back_normal"
+	   	    android:label=""
+	   	    android:name="com.run.notify.InfoItemsActivity" />   	
+    	    	
+    	<!--QQ登录配置-->
+    	<activity 
+    	    android:name="com.tencent.connect.common.AssistActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" 
+            android:screenOrientation="portrait" />
+    	<activity 
+    	    android:name="com.tencent.tauth.AuthActivity"
+    	    android:noHistory="true"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tencent1103545234"/>
+            </intent-filter>
+        </activity>    	
+        
+   	
+    	<!-- 极光推送 SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.run" />
+            </intent-filter>
+        </activity>
+       <!--  极光推送 SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>    
+        
+        <!-- 极光推送 SDK 核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />                
+            </intent-filter>
+        </service>
+        
+        <!-- 极光推送 SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true" >
+             <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   Required  显示通知栏
+                <category android:name="com.run" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>            
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>  
+        </receiver>
+        
+       <!--  极光推送 SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+                
+        <receiver
+            android:name="com.run.push.PushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />  
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.run" />
+            </intent-filter>
+        </receiver>
+                 
+        <!-- 百度地图API_KEY -->
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="pPlPVDFcEt4xnyZxzHUKBthS" />
+        
+        <!-- 极光推送APPKEY -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="7a4bc9b4de7e8d170a47adec" />    	
+        
+    </application>     
+
+</manifest>

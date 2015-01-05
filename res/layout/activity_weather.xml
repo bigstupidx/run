@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <LinearLayout
+        android:id="@+id/weather_feature"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false" > 
+               
+        <RelativeLayout 
+            android:background="@drawable/wea_bg_white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0" >
+            <TextView 
+                android:id="@+id/fource_onetm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10月16日  周四"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"                
+                android:layout_centerHorizontal="true" />
+            <ImageView 
+                android:id="@+id/fource_oneicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wea_two_1"
+                android:layout_below="@id/fource_onetm"
+                android:layout_centerInParent="true" />
+            <TextView 
+                android:id="@+id/fource_onetp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15/25C"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/fource_oneicon"
+                android:layout_centerHorizontal="true" />
+            <TextView 
+                android:id="@+id/fource_onete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="晴/多云"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/fource_onetp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:background="@drawable/wea_bg_white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0" >
+            <TextView 
+                android:id="@+id/fource_twotm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10月17日  周五"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true" />
+            <ImageView 
+                android:id="@+id/fource_twoicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                
+                android:background="@drawable/wea_two_2"
+                android:layout_below="@id/fource_twotm"
+                android:layout_centerInParent="true"/>
+            <TextView 
+                android:id="@+id/fource_twotp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16/24C"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/fource_twoicon"
+                android:layout_centerHorizontal="true" />
+            <TextView 
+                android:id="@+id/fource_twote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="多云"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/fource_twotp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:background="@drawable/wea_bg_white"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0" >
+            <TextView 
+                android:id="@+id/fource_threetm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10月18日  周六"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true" />
+            <ImageView 
+                android:id="@+id/fource_threeicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wea_two_3"
+                android:layout_below="@id/fource_threetm"
+                android:layout_centerInParent="true" />
+            <TextView 
+                android:id="@+id/fource_threetp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17/25C"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:layout_below="@id/fource_threeicon"
+                android:layout_centerHorizontal="true" />
+            <TextView 
+                android:id="@+id/fource_threete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="晴/多云"
+                android:textSize="14sp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/fource_threetp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/contactHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/weather_bg2"     
+        android:layout_above="@id/weather_feature" >
+        
+        <LinearLayout 
+            android:id="@+id/weather_first"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+            <ImageView 
+                android:id="@+id/weather_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sunny" />
+            <RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp" >
+                <TextView 
+                    android:id="@+id/city_temprature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textSize="38sp"
+                    android:textColor="@color/white" />
+                <TextView 
+                    android:id="@+id/city_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="晴"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_toRightOf="@id/city_temprature"
+                    android:layout_alignBaseline="@id/city_temprature" />
+                <TextView 
+                    android:id="@+id/city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="杭州"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/city_temprature"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/ic_dingwei"
+                    android:drawablePadding="5dp" />
+                <TextView
+                    android:id="@+id/city_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10月15日  周三"
+                    android:textSize="11sp"
+                    android:textColor="@color/white"
+                    android:layout_below="@id/city_name"
+                    android:layout_marginTop="10dp" />               
+            </RelativeLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/weather_second"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/bg_shuj"
+            android:layout_below="@id/weather_first" >
+            <TextView 
+                android:id="@+id/second_uv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/ultravioletray"                
+                android:layout_weight="2"                
+                android:textSize="11sp"
+                android:textColor="@color/white" />            
+            <TextView 
+                android:id="@+id/second_hm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/humidity"
+                android:layout_weight="2"
+                android:text=" 35%"
+                android:textSize="11sp"
+                android:textColor="@color/white" />
+            <TextView 
+                android:id="@+id/second_wd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/wind"
+                android:layout_weight="3"
+                android:textSize="11sp"
+                android:textColor="@color/white" />
+            <TextView 
+                android:id="@+id/second_pm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/pm"
+                android:layout_weight="3"                
+                android:textSize="11sp"                
+                android:textColor="@color/white" />            
+        </LinearLayout>
+        
+        <RelativeLayout 
+            android:layout_below="@id/weather_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ydjy"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" >
+            <TextView                
+                android:id="@+id/run_advisetitle" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginLeft="20.0dp" 
+                android:layout_marginTop="20.0dp" 
+                android:text="运动建议："
+                android:textSize="17.0sp" 
+                android:textColor="@color/res_cor2"  />
+            <TextView                
+                android:id="@+id/run_advise" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dp" 
+                android:layout_marginTop="10.0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:textSize="15.0sp" 
+                android:textColor="@color/res_cor2"
+                android:layout_below="@id/run_advisetitle" />
+        </RelativeLayout>        
+    </RelativeLayout>
+    
+
+</RelativeLayout>

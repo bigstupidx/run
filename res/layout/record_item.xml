@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/Item_Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:text="09月12日    星期二 17:40" />
+    
+    <LinearLayout 
+        android:id="@+id/layout_top"
+        android:orientation="horizontal" 
+        android:background="@color/white" 
+        android:layout_width="match_parent" 
+        android:layout_height="50dp" >
+            <LinearLayout
+                android:gravity="center" 
+                android:orientation="vertical" 
+                android:layout_width="0.0dp" 
+                android:layout_height="match_parent"              
+                android:layout_weight="1.0" >                
+                <RelativeLayout 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" >
+                    <TextView 
+                        android:textSize="19sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Item_Distance" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="@string/init_distance" />
+                    <TextView 
+                        android:textSize="12.0sp" 
+                        android:textColor="@color/layout_history_scolor"
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginLeft="5.0dp" 
+                        android:layout_marginBottom="2.0dp" 
+                        android:text="@string/km" 
+                        android:layout_toRightOf="@id/Item_Distance" 
+                        android:layout_alignBottom="@id/Item_Distance" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View 
+                android:layout_gravity="center" 
+                android:background="#ffcbd1d8" 
+                android:layout_width="1.0dp" 
+                android:layout_height="35.0dp" />
+            <LinearLayout 
+                android:gravity="center" 
+                android:orientation="vertical" 
+                android:layout_width="0.0dp" 
+                android:layout_height="match_parent" 
+                android:layout_weight="1.0">                
+                <RelativeLayout 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" >
+                    <TextView 
+                        android:textSize="19sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Item_Hour" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="@string/init_time" />
+                    <TextView 
+                        android:textSize="12sp" 
+                        android:textColor="@color/layout_history_scolor" 
+                        android:id="@+id/Total_Time_unit" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginBottom="2.0dp" 
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/hour" 
+                        android:layout_toRightOf="@id/Item_Hour" 
+                        android:layout_alignBottom="@id/Item_Hour" />
+                    <TextView 
+                        android:textSize="19sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Item_Min" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginBottom="2.0dp" 
+                        android:text="@string/init_time" 
+                        android:layout_toRightOf="@id/Total_Time_unit" 
+                        android:layout_alignBottom="@id/Item_Hour" />
+                    <TextView 
+                        android:textSize="12.0sp" 
+                        android:textColor="@color/layout_history_scolor" 
+                        android:id="@+id/Total_Time_unit2" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginBottom="2.0dp" 
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/min" 
+                        android:layout_toRightOf="@id/Item_Min" 
+                        android:layout_alignBottom="@id/Item_Min" />
+                </RelativeLayout>
+            </LinearLayout>
+            <View 
+                android:layout_gravity="center" 
+                android:background="#ffcbd1d8" 
+                android:layout_width="1.0dp" 
+                android:layout_height="35.0dp" />
+            <LinearLayout 
+                android:gravity="center" 
+                android:orientation="vertical" 
+                android:layout_width="0.0dp" 
+                android:layout_height="match_parent" 
+                android:layout_weight="1.0" >                
+                <RelativeLayout 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" >
+                    <TextView 
+                        android:textSize="19sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Item_Calorie" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="@string/init_distance" />
+                    <TextView 
+                        android:textSize="12.0sp" 
+                        android:textColor="@color/layout_history_scolor" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginLeft="5.0dp" 
+                        android:layout_marginBottom="2.0dp" 
+                        android:text="@string/cal" 
+                        android:layout_toRightOf="@id/Item_Calorie" 
+                        android:layout_alignBottom="@id/Item_Calorie" />
+                </RelativeLayout>
+            </LinearLayout>
+       </LinearLayout>
+
+</LinearLayout>

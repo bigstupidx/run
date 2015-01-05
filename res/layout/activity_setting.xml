@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/user_background" >
+    
+    <ImageView
+        android:contentDescription="@string/description"
+        android:id="@+id/set_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"        
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_no_head"
+        android:src="@drawable/bg_photo_mask" />
+    
+    <TextView
+        android:id="@+id/set_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/set_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"        
+        android:textSize="17sp"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"
+        android:text="点击登录" />
+    
+    <LinearLayout 
+        android:orientation="vertical" 
+        android:id="@+id/userSetting"
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent"
+        android:layout_below="@id/set_name"
+        android:layout_marginTop="5.0dp" >
+        
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50.0dp"
+                android:background="@drawable/opt_selectitem" >
+                <ImageView
+                    android:id="@+id/ImageView_reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="18.0dp"
+                    android:background="@drawable/set_ic_horn"
+                    android:contentDescription="@string/description" />
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ImageView_reminder"
+                    android:padding="10.0dp"
+                    android:text="@string/voice_reminder"
+                    android:textColor="@color/setting_text" />
+                <ImageView
+                    android:id="@+id/setting_reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16.0dp"                    
+                    android:contentDescription="@string/description" />
+            </RelativeLayout>
+            
+            <View
+                android:background="@drawable/divider_group" 
+                android:layout_width="match_parent" 
+                android:layout_height="1.0dp" />
+            
+            <RelativeLayout 
+                android:id="@+id/setting_account" 
+                android:background="@drawable/opt_selectitem" 
+                android:focusable="true" 
+                android:layout_width="match_parent" 
+                android:layout_height="50.0dp" >
+                <ImageView
+                    android:contentDescription="@string/description"
+                    android:id="@+id/ImageView02" 
+                    android:background="@drawable/set_icon_context" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="18.0dp" 
+                    android:layout_alignParentLeft="true" 
+                    android:layout_centerVertical="true" />
+                <TextView 
+                    android:textColor="@color/setting_text" 
+                    android:padding="10.0dp" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/account_manage" 
+                    android:layout_toRightOf="@+id/ImageView02" 
+                    android:layout_centerVertical="true" />
+                <LinearLayout 
+                    android:orientation="horizontal" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginRight="16.0dp" 
+                    android:layout_alignParentRight="true" 
+                    android:layout_centerVertical="true" >
+                    <ImageView 
+                        android:contentDescription="@string/description"
+                        android:id="@+id/setting_sina" 
+                        android:background="@drawable/icon_weibo"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="30.0dp" 
+                        android:layout_height="30.0dp" 
+                        android:layout_weight="1.0" />
+                    <ImageView
+                        android:contentDescription="@string/description"
+                        android:id="@+id/setting_QQ" 
+                        android:background="@drawable/icon_qq"
+                        android:layout_width="30.0dp" 
+                        android:layout_height="30.0dp"                         
+                        android:layout_marginRight="10dp"                        
+                        android:layout_weight="1.0" />
+                    <ImageView
+                        android:contentDescription="@string/description"
+                        android:id="@+id/setting_weixin" 
+                        android:background="@drawable/icon_weixin" 
+                        android:layout_width="30.0dp" 
+                        android:layout_height="30.0dp"                       
+                        android:layout_weight="1.0" />
+                </LinearLayout>
+                
+            </RelativeLayout>
+            
+            <View 
+                android:background="@drawable/divider_group"
+                android:layout_width="match_parent" 
+                android:layout_height="1.0dp" />
+            
+            <RelativeLayout 
+                android:id="@+id/setting_offline" 
+                android:background="@drawable/opt_selectitem"
+                android:layout_width="match_parent" 
+                android:layout_height="50.0dp">
+                <ImageView
+                    android:contentDescription="@string/description"
+                    android:id="@+id/ImageView01"
+                    android:background="@drawable/set_icon_download" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="18.0dp" 
+                    android:layout_alignParentLeft="true" 
+                    android:layout_centerVertical="true" />
+                <TextView 
+                    android:textColor="@color/setting_text" 
+                    android:padding="10.0dp" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/offline_map" 
+                    android:layout_toRightOf="@+id/ImageView01" 
+                    android:layout_centerVertical="true" />
+                <ImageView
+                    android:contentDescription="@string/description"
+                    android:background="@drawable/set_icon_next" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginRight="16.0dp" 
+                    android:layout_alignParentRight="true" 
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            
+            <View 
+                android:background="@drawable/divider_group" 
+                android:layout_width="match_parent" 
+                android:layout_height="1.0dp" />
+            
+            <RelativeLayout 
+                android:id="@+id/setting_updates" 
+                android:background="@drawable/opt_selectitem" 
+                android:focusable="true" 
+                android:layout_width="match_parent" 
+                android:layout_height="50.0dp">
+                <ImageView
+                    android:contentDescription="@string/description"
+                    android:id="@+id/ImageView04"
+                    android:background="@drawable/set_icon_update" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="18.0dp" 
+                    android:layout_alignParentLeft="true" 
+                    android:layout_centerVertical="true" />
+                <TextView
+                    android:textColor="@color/setting_text" 
+                    android:id="@+id/myStatusTitle" 
+                    android:padding="10.0dp" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/check_updates" 
+                    android:layout_toRightOf="@+id/ImageView04" 
+                    android:layout_centerVertical="true" />
+                <ImageView
+                    android:contentDescription="@string/description"
+                    android:id="@+id/image_find" 
+                    android:background="@drawable/set_tip_update" 
+                    android:visibility="gone" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="3.0dp" 
+                    android:layout_toRightOf="@+id/myStatusTitle" 
+                    android:layout_centerVertical="true" />
+                <ImageView
+                    android:contentDescription="@string/description"
+                    android:background="@drawable/set_icon_next" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginRight="16.0dp" 
+                    android:layout_alignParentRight="true" 
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            
+            <View 
+                android:background="@drawable/divider_group" 
+                android:layout_width="match_parent" 
+                android:layout_height="1.0dp" />
+            
+            <RelativeLayout 
+                android:id="@+id/setting_feed" 
+                android:background="@drawable/opt_selectitem" 
+                android:focusable="true" 
+                android:layout_width="match_parent" 
+                android:layout_height="50.0dp" 
+                android:layout_marginTop="20.0dp">
+                <ImageView
+                    android:contentDescription="@string/description"
+                    android:id="@+id/ImageView05"
+                    android:background="@drawable/set_icon_comment" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="18.0dp" 
+                    android:layout_alignParentLeft="true" 
+                    android:layout_centerVertical="true" />
+                <TextView 
+                    android:textColor="@color/setting_text"                    
+                    android:padding="10.0dp" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/feed_back" 
+                    android:layout_toRightOf="@+id/ImageView05" 
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+            
+            <RelativeLayout 
+                android:focusable="true" 
+                android:layout_width="match_parent" 
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp" >
+                <RelativeLayout
+                    android:contentDescription="@string/description"
+                    android:id="@+id/setting_quite" 
+                    android:background="@drawable/quit"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+                    <TextView 
+                        android:textColor="@color/setting_text" 
+                        android:padding="10.0dp" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="@string/check_quit" 
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+                
+            </RelativeLayout>
+        </LinearLayout>    
+
+</RelativeLayout>

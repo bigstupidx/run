@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"    
+    android:orientation="vertical" >        
+        
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:orientation="horizontal" 
+        android:background="@color/white" 
+        android:layout_width="match_parent" 
+        android:layout_height="75dp"
+        android:baselineAligned="false"
+        android:layout_marginTop="3dp" >
+            <LinearLayout 
+                android:gravity="center" 
+                android:orientation="vertical" 
+                android:layout_width="0.0dp" 
+                android:layout_height="match_parent"              
+                android:layout_weight="1.0" >
+                <TextView
+                    android:enabled="false" 
+                    android:textSize="16sp" 
+                    android:textColor="@color/layout_history_scolor" 
+                    android:id="@+id/edt_item1" 
+                    android:background="@null" 
+                    android:focusable="false" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="4.0dp" 
+                    android:text="@string/TotalDistance" 
+                    android:singleLine="true" 
+                    android:drawableLeft="@drawable/runned_icon_range" />
+                <RelativeLayout 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="4.0dp"
+                    android:layout_marginBottom="5dp" >
+                    <TextView 
+                        android:textSize="24.0sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Total_Distance" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="@string/init_distance" />
+                    <TextView 
+                        android:textSize="12.0sp" 
+                        android:textColor="@color/history_two" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginLeft="5.0dp" 
+                        android:layout_marginBottom="2.0dp" 
+                        android:text="@string/km" 
+                        android:layout_toRightOf="@id/Total_Distance" 
+                        android:layout_alignBottom="@id/Total_Distance" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--View 
+                android:layout_gravity="center" 
+                android:background="#ffcbd1d8" 
+                android:layout_width="1.0dp" 
+                android:layout_height="30.0dp" /-->
+            <LinearLayout 
+                android:gravity="center" 
+                android:orientation="vertical" 
+                android:layout_width="0.0dp" 
+                android:layout_height="fill_parent" 
+                android:layout_weight="1.0">
+                <TextView 
+                    android:enabled="false" 
+                    android:textSize="16.0sp" 
+                    android:textColor="@color/layout_history_scolor" 
+                    android:id="@+id/edt_item2" 
+                    android:background="@null" 
+                    android:focusable="false" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="4.0dp" 
+                    android:text="@string/TotalTime" 
+                    android:singleLine="true" 
+                    android:drawableLeft="@drawable/runned_icon_time" />
+                <RelativeLayout 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="4.0dp"
+                    android:layout_marginBottom="5dp" >
+                    <TextView 
+                        android:textSize="24.0sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Total_Hour" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="@string/init_time" />
+                    <TextView 
+                        android:textSize="12.0sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Total_Time_unit" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginBottom="2.0dp"
+                        android:layout_marginLeft="5.0dp"
+                        android:layout_marginRight="5.0dp"
+                        android:text="@string/hour" 
+                        android:layout_toRightOf="@id/Total_Hour" 
+                        android:layout_alignBottom="@id/Total_Hour" />
+                    <TextView 
+                        android:textSize="24.0sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Total_Min" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginBottom="2.0dp" 
+                        android:text="@string/init_time" 
+                        android:layout_toRightOf="@id/Total_Time_unit" 
+                        android:layout_alignBottom="@id/Total_Hour" />
+                    <TextView 
+                        android:textSize="12.0sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Total_Time_unit2" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginBottom="2.0dp" 
+                        android:layout_marginLeft="5.0dp"
+                        android:text="@string/min" 
+                        android:layout_toRightOf="@id/Total_Min" 
+                        android:layout_alignBottom="@id/Total_Min" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!--View 
+                android:layout_gravity="center" 
+                android:background="#ffcbd1d8" 
+                android:layout_width="1.0dp" 
+                android:layout_height="30.0dp" /-->
+            <LinearLayout 
+                android:gravity="center" 
+                android:orientation="vertical" 
+                android:layout_width="0.0dp" 
+                android:layout_height="match_parent" 
+                android:layout_weight="1.0" >
+                <TextView 
+                    android:enabled="false" 
+                    android:textSize="16.0sp" 
+                    android:textColor="@color/layout_history_scolor" 
+                    android:id="@+id/edt_item3" 
+                    android:background="@null" 
+                    android:focusable="false" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="4.0dp" 
+                    android:text="@string/TotalCalorie" 
+                    android:singleLine="true" 
+                    android:drawableLeft="@drawable/runned_icon_colora" />
+                <RelativeLayout 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginTop="4.0dp"
+                    android:layout_marginBottom="5dp" >
+                    <TextView 
+                        android:textSize="24.0sp" 
+                        android:textColor="@color/history_two" 
+                        android:id="@+id/Total_Calorie" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="@string/init_distance" />
+                    <TextView 
+                        android:textSize="12.0sp" 
+                        android:textColor="@color/history_two" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:layout_marginLeft="5.0dp" 
+                        android:layout_marginBottom="2.0dp" 
+                        android:text="@string/cal"
+                        android:layout_toRightOf="@id/Total_Calorie" 
+                        android:layout_alignBottom="@id/Total_Calorie" />
+                </RelativeLayout>
+            </LinearLayout>
+       </LinearLayout>
+       
+    <ImageView 
+        android:id="@+id/lv_nodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/historylist_nonedata_img_bg"
+        android:layout_below="@id/layout_top"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+       
+    <ListView 
+        android:id="@+id/lv_record"        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"        
+        android:layout_below="@id/layout_top"
+        android:visibility="visible" />
+
+</RelativeLayout>

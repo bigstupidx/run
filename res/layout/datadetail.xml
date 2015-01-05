@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_bottom"
+    android:orientation="horizontal" 
+    android:background="@color/white"
+    android:layout_width="match_parent" 
+    android:layout_height="60dip" >
+        <LinearLayout 
+            android:gravity="center" 
+            android:orientation="vertical" 
+            android:layout_width="0.0dip" 
+            android:layout_height="match_parent"              
+            android:layout_weight="1.0" >
+            <TextView
+                android:enabled="false" 
+                android:textSize="16sp" 
+                android:textColor="@color/layout_history_scolor"                
+                android:background="@null" 
+                android:focusable="false" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="4.0dip" 
+                android:text="@string/TotalDistance" 
+                android:singleLine="true" 
+                android:drawableLeft="@drawable/runned_icon_range" />
+            <RelativeLayout 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="4.0dip" >
+                <TextView 
+                    android:textSize="24.0sp" 
+                    android:textColor="@color/history_two" 
+                    android:id="@+id/detail_Distance" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/init_distance" />
+                <TextView 
+                    android:textSize="12.0sp" 
+                    android:textColor="@color/history_two" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="5.0dip" 
+                    android:layout_marginBottom="2.0dip" 
+                    android:text="@string/km" 
+                    android:layout_toRightOf="@id/detail_Distance" 
+                    android:layout_alignBottom="@id/detail_Distance" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View 
+            android:layout_gravity="center" 
+            android:background="#ffcbd1d8" 
+            android:layout_width="1.0dip" 
+            android:layout_height="30.0dip" />
+        <LinearLayout 
+            android:gravity="center" 
+            android:orientation="vertical" 
+            android:layout_width="0.0dip" 
+            android:layout_height="match_parent" 
+            android:layout_weight="1.0">
+            <TextView 
+                android:enabled="false" 
+                android:textSize="16.0sp" 
+                android:textColor="@color/layout_history_scolor"
+                android:background="@null" 
+                android:focusable="false" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="4.0dip" 
+                android:text="@string/TotalTime" 
+                android:singleLine="true" 
+                android:drawableLeft="@drawable/runned_icon_time" />
+            <RelativeLayout 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="4.0dip">
+                <TextView 
+                    android:textSize="24.0sp" 
+                    android:textColor="@color/history_two" 
+                    android:id="@+id/detail_Hour" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/init_time" />
+                <TextView 
+                    android:textSize="12.0sp" 
+                    android:textColor="@color/history_two" 
+                    android:id="@+id/detail_Time_unit" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginBottom="2.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:text="@string/hour" 
+                    android:layout_toRightOf="@id/detail_Hour" 
+                    android:layout_alignBottom="@id/detail_Hour" />
+                <TextView 
+                    android:textSize="24.0sp" 
+                    android:textColor="@color/history_two" 
+                    android:id="@+id/detail_Min" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginBottom="2.0dip" 
+                    android:text="@string/init_time" 
+                    android:layout_toRightOf="@id/detail_Time_unit" 
+                    android:layout_alignBottom="@id/detail_Time_unit" />
+                <TextView 
+                    android:textSize="12.0sp" 
+                    android:textColor="@color/history_two" 
+                    android:id="@+id/detail_Time_unit2" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginBottom="2.0dip" 
+                    android:layout_marginLeft="5.0dip"
+                    android:text="@string/min" 
+                    android:layout_toRightOf="@id/detail_Min" 
+                    android:layout_alignBottom="@id/detail_Min" />
+            </RelativeLayout>
+        </LinearLayout>
+        <View 
+            android:layout_gravity="center" 
+            android:background="#ffcbd1d8" 
+            android:layout_width="1.0dip" 
+            android:layout_height="30.0dip" />
+        <LinearLayout 
+            android:gravity="center" 
+            android:orientation="vertical" 
+            android:layout_width="0.0dip" 
+            android:layout_height="match_parent" 
+            android:layout_weight="1.0" >
+            <TextView 
+                android:enabled="false" 
+                android:textSize="16.0sp" 
+                android:textColor="@color/layout_history_scolor"
+                android:background="@null" 
+                android:focusable="false" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="4.0dip" 
+                android:text="@string/TotalCalorie" 
+                android:singleLine="true" 
+                android:drawableLeft="@drawable/runned_icon_colora" />
+            <RelativeLayout 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginTop="4.0dip" >
+                <TextView 
+                    android:textSize="24.0sp" 
+                    android:textColor="@color/history_two" 
+                    android:id="@+id/detail_Calorie" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/init_distance" />
+                <TextView 
+                    android:textSize="12.0sp" 
+                    android:textColor="@color/history_two" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:layout_marginLeft="5.0dip" 
+                    android:layout_marginBottom="2.0dip" 
+                    android:text="@string/cal" 
+                    android:layout_toRightOf="@id/detail_Calorie" 
+                    android:layout_alignBottom="@id/detail_Calorie" />
+            </RelativeLayout>
+        </LinearLayout>
+   </LinearLayout>

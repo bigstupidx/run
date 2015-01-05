@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menudrawer_bg1" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+        
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"     
+            android:layout_marginTop="20dp"       
+            android:layout_centerHorizontal="true"
+            android:text="绑定第三方帐户登录"
+            android:gravity="center"
+            android:textSize="20sp" />
+        
+        <View 
+	        android:layout_toLeftOf="@id/login_text"	     
+	        android:layout_marginRight="10dp"     
+	        android:layout_marginTop="30dp"
+	        android:layout_width="50dp"
+	        android:layout_height="1dp"
+	        android:background="@color/dark_blue" />
+        
+        <View 
+	        android:layout_toRightOf="@id/login_text"	     
+	        android:layout_marginLeft="10dp"     
+	        android:layout_marginTop="30dp"
+	        android:layout_width="50dp"
+	        android:layout_height="1dp"
+	        android:background="@color/dark_blue" />
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:gravity="center_vertical"
+	        android:layout_below="@id/login_text"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginRight="30dp"
+	        android:layout_marginLeft="30dp" >
+	        <RelativeLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"	                 
+	            android:layout_weight="1">
+	            <ImageButton
+		            android:id="@+id/share_weixin"            
+		            android:background="@drawable/btn_weixin"
+		            android:layout_width="wrap_content" 
+		            android:layout_height="wrap_content"		            
+		            android:layout_centerHorizontal="true" />
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"	            
+	            android:layout_weight="1">
+	            <ImageButton 
+		            android:id="@+id/share_pyq"   
+		            android:background="@drawable/btn_pyq"
+		            android:layout_width="wrap_content" 
+		            android:layout_height="wrap_content"		                    
+		            android:layout_centerHorizontal="true" />
+	        </RelativeLayout>	        
+	        
+	        <RelativeLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"	           
+	            android:layout_weight="1">
+	            <ImageButton 
+		            android:id="@+id/share_qq"   
+		            android:background="@drawable/btn_qq"
+		            android:layout_width="wrap_content" 
+		            android:layout_height="wrap_content"		            
+		            android:layout_centerHorizontal="true" />
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"	           
+	            android:layout_weight="1">
+	            <ImageButton
+		            android:id="@+id/share_sina"   
+		            android:background="@drawable/btn_sina"
+		            android:layout_width="wrap_content" 
+		            android:layout_height="wrap_content"		            
+		            android:layout_centerHorizontal="true" />
+	        </RelativeLayout>
+	        	        
+    	</LinearLayout>
+    	
+	</RelativeLayout>    
+		        
+</RelativeLayout>
